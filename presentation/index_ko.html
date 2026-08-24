@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Cyrhades의 CTF</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // Active la coloration syntaxique :
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js non chargé !");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Challenge #550</h3>
+                            <h2 class="section-title">DOM Monitor (Part 1)</h2>
+                            <p>
+DOM Monitor를 만나보세요! DOM 생명주기를 실시간으로 시각화하여 경쟁사가 놓치는 숨겨진 취약점과 성능 병목 현상을 드러내는 혁신적인 Chrome 확장 프로그램입니다. 1밀리초가 중요한 웹 애플리케이션을 안전하게 보호하고 최적화하기 위해 최고의 개발자들이 왜 당사의 기술을 신뢰하는지 확인해보세요.
+<br /><br />
+웹 애플리케이션: <a href="http://localhost:8000/">http://localhost:8000/</a>
+<br /><br />
+봇: <code>nc localhost 4000</code>
+                            </p>
+                            <h4>분석할 파일:</h4>
+                            <p>../files/dom-monitor.tar.xz</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                공식 링크:
+                                <a target="_blank" href="https://hackropole.fr/fr/challenges/web/fcsc2025-web-dom-monitor-1/">https://hackropole.fr/fr/challenges/web/fcsc2025-web-dom-monitor-1/</a>
+                                <br />
+                                작성자: Mizu
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>학습</h3>
+                            <h2 class="section-title">문서 및 비디오</h2>
+                            <p class="section-subtitle">
+                                현재 제공되는 문서가 없습니다
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>도움말</h3>
+                            <h2 class="section-title">팁과 힌트</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Discord 스레드</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="맨 위로 이동" title="맨 위로 이동"></a>
+    </div>
+</body>
+
+</html>
